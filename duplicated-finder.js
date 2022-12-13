@@ -17,12 +17,12 @@ function duplicatedFinderQuadratic() {
 duplicatedFinderQuadratic()
 
 // ***** with n notation 
-let myItems = []
-let myDuplicatedItems = []
+let myItems = [] // this is for items not duplicated in the given array
+let myDuplicatedItems = [] // this is for items been duplicated in the given array
 function duplicatedFinderLinear() {
-    for(let i = 0; i < tempArray.length; i++) {
-        if(!myItems.includes(tempArray[i])) myItems.push(tempArray[i])
-        else if(!myDuplicatedItems.includes(tempArray[i])) myDuplicatedItems.push(tempArray[i])
+    for(let i = 0; i < tempArray.length; i++) { //this is for visiting all items in the list
+        if(!myItems.includes(tempArray[i])) myItems.push(tempArray[i]) // this for pushing items in the myItems array and check if same item is there or not. if YES, it means that this item is duplicated in the given array
+        else if(!myDuplicatedItems.includes(tempArray[i])) myDuplicatedItems.push(tempArray[i]) // this for adding duplicated items in the given array and push them into myDuplicatedItems, includes check if duplicated items are exist in the duplicated list or not. if YES means that it has been duplicated more than once and will ignore to add it into the list
     }
     console.log('duplicated items with n*1 algorithm', myDuplicatedItems);
 }
