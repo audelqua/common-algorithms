@@ -17,4 +17,15 @@ function duplicatedFinderQuadratic() {
 duplicatedFinderQuadratic()
 
 // ***** with n notation 
+let myItems = []
+let myDuplicatedItems = []
+function duplicatedFinderLinear() {
+    for(let i = 0; i < tempArray.length; i++) {
+        if(!myItems.includes(tempArray[i])) myItems.push(tempArray[i])
+        else if(!myDuplicatedItems.includes(tempArray[i])) myDuplicatedItems.push(tempArray[i])
+    }
+    console.log('duplicated items with n*1 algorithm', myDuplicatedItems);
+}
+
+duplicatedFinderLinear()
 
