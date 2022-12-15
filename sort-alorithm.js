@@ -7,7 +7,7 @@ const givenArray = [9,2,4,6,7,23,5,6, 34,4,687,78,4234,56,2,3,7,5,3,67,8,9,6,4,3
 // Second step: then we need to meet its left side element
 // Third step: then we have to compare if right side is smaller than left side and if YES we have to changes swap those elements. 
 // NOTE: we will save one side in another variable so after swap happened we still have one side previous amount
-
+// ***** this algorithm has n^2 O notation
 function sortAlgorithm() {
     for(let i = 0; i < givenArray.length; i ++) {
         for(let j = 0; j < i; j ++){
