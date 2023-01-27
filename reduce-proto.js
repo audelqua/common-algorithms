@@ -20,17 +20,19 @@ const multiplyElements = customNumericElements2.reduce(function(accumulator, cur
 
 const someElements  = [10, 10, 10]
 const inValue = 10
-Array.prototype.customReduce = function(calculatorFunction, initialValue) {
-    let internalCalculatedAmount = undefined
+Array.prototype.customReduce = function(calculatorFunction, initialValue) { // **** this method is a custom function which get two values (A calculator function and an initial value)
+    let internalCalculatedAmount = undefined // **** this variable is out accumulator
 
+    // **** here we check if we have initial value or not
     if(initialValue) internalCalculatedAmount = initialValue
     else internalCalculatedAmount = 0
 
+    // **** here we iterate on each items and pass users custom calculator function to it and save the value into internal variable we have
     this.forEach(function(item){
         internalCalculatedAmount = calculatorFunction(internalCalculatedAmount, item)
     })
 
-    return internalCalculatedAmount
+    return internalCalculatedAmount // **** then we return the final value
 
 }
 
