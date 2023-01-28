@@ -8,6 +8,14 @@ const absoluteDifferenceFinder = (givenArray) => {
     let rtl = 0
     
     for(let x = 0; x < givenArray.length; x++) {
-        
+        ltr += givenArray[x][x]
+        rtl += givenArray[x][(givenArray.length - 1) - x]
     }
+
+    let response = ltr - rtl
+    if(response < 0) response = (response * -1)
+    return response
 }
+
+const x = absoluteDifferenceFinder([[1,4,9], [2,5,8],[3,6,9]])
+console.log(x);
