@@ -11,9 +11,9 @@ const someOtherArray = ['audrey', 'reza', 'ahmad', 'ali']
 
 // prototype is constructor javaScript objects 
 Array.prototype.customEvery = function(customCallbackFunction) {
-    let boolean = false
+    let boolean = false // *** lets define internal variable 
     this.forEach(function(item) {
-        if(customCallbackFunction(item)) boolean = true
+        if(customCallbackFunction(item)) boolean = true // ***** let iterate on all items, if any of these function returned true we will change internal var into true
     })
     
     return boolean
