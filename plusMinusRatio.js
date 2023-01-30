@@ -10,16 +10,19 @@ const ratioFinder = givenArray => {
     let minusRatio = undefined
     let zeroRatio = undefined
 
-    givenArray.forEach(givenNumber => {
+    givenArray.forEach(givenNumber => { //***** iterate on each item and add one after matching the conditions 
         if (givenNumber > 0) pluses += 1
         else if (givenNumber === 0) zeros += 1
         else minuses += 1
     })
 
+    //*****finding ratios 
     plusRatio = parseFloat((pluses / givenArray.length)).toFixed(4)
     minusRatio = parseFloat((minuses / givenArray.length)).toFixed(4)
     zeroRatio = parseFloat((zeros / givenArray.length)).toFixed(4)
 
+
+    // log ratios
     console.log(plusRatio)
     console.log(minusRatio)
     console.log(zeroRatio)
