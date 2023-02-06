@@ -5,3 +5,6 @@ const itemNumber6 = someArray.find(function(item){
     return targetItem
 })
 console.log('itemNumber6', itemNumber6);
+
+const itemNumber5 = someArray.find(item => item === 5)
+console.log('itemNumber5', itemNumber5);
