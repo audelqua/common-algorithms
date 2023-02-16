@@ -31,26 +31,27 @@ class RandomNumberGenerator{
     finderMethodInBinaryTree() {
         let top = this.maximum
         let bottom = this.minimum
+        let steps = 0
         const randomNumber = this.mainMethod()
         console.log('randomNumber', randomNumber);
 
         const splitterFunction = () => {
             let average = Math.floor((top + bottom) / 2)
-            console.log('average', average);
-            
+            console.log('average and steps:', average, '_', steps);
             if(randomNumber > average) {
                 bottom = average;
             }else if(randomNumber < average) {
                 top = average
             }
 
+            steps = steps + 1
             if(average !== randomNumber) splitterFunction()
         }
         splitterFunction()
     }
 }
 
-const someInstance = new RandomNumberGenerator(12324234235, 0)
+const someInstance = new RandomNumberGenerator(2342353464575674567, 0)
 
 someInstance.finderMethodInBinaryTree()
 
