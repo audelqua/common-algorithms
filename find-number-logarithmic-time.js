@@ -13,19 +13,25 @@ class RandomNumberGenerator{
     }
 
 
-    finderMethodInLogarithmicTime() {
+    finderMethodInLinearTime() {
         const top = this.maximum
         const bottom = this.minimum
-
-        console.log('targetNumber', this.mainMethod());
-        console.log('top', top);
-        console.log('bottom', bottom);
+        const randomNumber = this.mainMethod()
+        
+        for(let i = bottom; i < top; i ++){
+            if(i !== randomNumber) {
+                console.log('not equal', i);
+            }else{
+                console.log('found', i);
+                break;
+            }
+        }
     }
 }
 
-const someInstance = new RandomNumberGenerator(10000000000, 0)
+const someInstance = new RandomNumberGenerator(100, 0)
 
-someInstance.finderMethodInLogarithmicTime()
+someInstance.finderMethodInLinearTime()
 
 
 
