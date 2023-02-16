@@ -5,7 +5,7 @@ class RandomNumberGenerator{
         this.maximum = max
     }
 
-    mainMethod() {
+    static mainMethod() {
         const { maximum, minimum } = this
         let randomNumber = Math.floor(Math.random() * (maximum - minimum) + minimum)
 
@@ -24,8 +24,6 @@ class RandomNumberGenerator{
 }
 
 const someInstance = new RandomNumberGenerator(10000000000, 0)
-const someRandomNumber = someInstance.mainMethod()
-console.log(someRandomNumber);
 
 someInstance.finderMethodInLogarithmicTime(someRandomNumber)
 
