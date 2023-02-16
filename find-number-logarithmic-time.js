@@ -25,7 +25,7 @@ class RandomNumberGenerator{
 
 const someInstance = new RandomNumberGenerator(10000000000, 0)
 
-someInstance.finderMethodInLogarithmicTime(someRandomNumber)
+someInstance.finderMethodInLogarithmicTime()
 
 
 
