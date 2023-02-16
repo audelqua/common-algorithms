@@ -5,7 +5,7 @@ class RandomNumberGenerator{
         this.maximum = max
     }
 
-    static mainMethod() {
+    mainMethod() {
         const { maximum, minimum } = this
         let randomNumber = Math.floor(Math.random() * (maximum - minimum) + minimum)
 
@@ -13,11 +13,11 @@ class RandomNumberGenerator{
     }
 
 
-    finderMethodInLogarithmicTime(targetNumber) {
+    finderMethodInLogarithmicTime() {
         const top = this.maximum
         const bottom = this.minimum
 
-        console.log('targetNumber', targetNumber);
+        console.log('targetNumber', this.mainMethod());
         console.log('top', top);
         console.log('bottom', bottom);
     }
