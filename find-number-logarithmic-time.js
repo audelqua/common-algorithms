@@ -11,8 +11,23 @@ class RandomNumberGenerator{
 
         return randomNumber
     }
+
+
+    finderMethodInLogarithmicTime(targetNumber) {
+        const top = this.maximum
+        const bottom = this.minimum
+
+        console.log('targetNumber', targetNumber);
+        console.log('top', top);
+        console.log('bottom', bottom);
+    }
 }
 
-const someInstance = new RandomNumberGenerator(3, 1)
+const someInstance = new RandomNumberGenerator(10000000000, 0)
 const someRandomNumber = someInstance.mainMethod()
+console.log(someRandomNumber);
+
+someInstance.finderMethodInLogarithmicTime(someRandomNumber)
+
+
 
