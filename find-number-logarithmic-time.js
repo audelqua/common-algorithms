@@ -28,7 +28,7 @@ class RandomNumberGenerator{
         }
     }
 
-    finderMethodInLogarithmicTime() {
+    finderMethodInBinaryTree() {
         let top = this.maximum
         let bottom = this.minimum
         const randomNumber = this.mainMethod()
@@ -52,7 +52,7 @@ class RandomNumberGenerator{
 
 const someInstance = new RandomNumberGenerator(12324234235, 0)
 
-someInstance.finderMethodInLogarithmicTime()
+someInstance.finderMethodInBinaryTree()
 
 
 
