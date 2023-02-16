@@ -20,9 +20,9 @@ class RandomNumberGenerator{
         
         for(let i = bottom; i < top; i ++){
             if(i !== randomNumber) {
-                console.log('not equal', i);
+                console.log('not equal and my random', i, randomNumber);
             }else{
-                console.log('found', i);
+                console.log('found and random', i, randomNumber);
                 break;
             }
         }
@@ -51,8 +51,9 @@ class RandomNumberGenerator{
     }
 }
 
-const someInstance = new RandomNumberGenerator(2342353464575674567, 0)
+const someInstance = new RandomNumberGenerator(1000000000000000, 0)
 
+// someInstance.finderMethodInLinearTime()
 someInstance.finderMethodInBinaryTree()
 
 
