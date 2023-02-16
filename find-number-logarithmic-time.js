@@ -27,11 +27,32 @@ class RandomNumberGenerator{
             }
         }
     }
+
+    finderMethodInLogarithmicTime() {
+        let top = this.maximum
+        let bottom = this.minimum
+        const randomNumber = this.mainMethod()
+        console.log('randomNumber', randomNumber);
+
+        const splitterFunction = () => {
+            let average = Math.floor((top + bottom) / 2)
+            console.log('average', average);
+            
+            if(randomNumber > average) {
+                bottom = average;
+            }else if(randomNumber < average) {
+                top = average
+            }
+
+            if(average !== randomNumber) splitterFunction()
+        }
+        splitterFunction()
+    }
 }
 
-const someInstance = new RandomNumberGenerator(100, 0)
+const someInstance = new RandomNumberGenerator(12324234235, 0)
 
-someInstance.finderMethodInLinearTime()
+someInstance.finderMethodInLogarithmicTime()
 
 
 
