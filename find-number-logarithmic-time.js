@@ -12,7 +12,6 @@ class RandomNumberGenerator{
         return randomNumber
     }
 
-
     finderMethodInLinearTime() {
         const top = this.maximum
         const bottom = this.minimum
@@ -33,11 +32,10 @@ class RandomNumberGenerator{
         let bottom = this.minimum
         let steps = 0
         const randomNumber = this.mainMethod()
-        console.log('randomNumber', randomNumber);
 
         const splitterFunction = () => {
             let average = Math.floor((top + bottom) / 2)
-            console.log('average and steps:', average, '_', steps);
+            console.log(`my random number is: ${randomNumber} - my average is ${average} - my steps is ${steps} - length of inputted number is: ${JSON.stringify(randomNumber).length}`);
             if(randomNumber > average) {
                 bottom = average;
             }else if(randomNumber < average) {
@@ -51,7 +49,7 @@ class RandomNumberGenerator{
     }
 }
 
-const someInstance = new RandomNumberGenerator(1000000000000000, 0)
+const someInstance = new RandomNumberGenerator(10000000, 0)
 
 // someInstance.finderMethodInLinearTime()
 someInstance.finderMethodInBinaryTree()
