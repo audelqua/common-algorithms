@@ -4,10 +4,7 @@ const itemNumber6 = someArray.find(function(item){
     if(item === 6) targetItem = item
     return targetItem
 })
-console.log('itemNumber6', itemNumber6);
-
 const itemNumber5 = someArray.find(item => item === 5)
-console.log('itemNumber5', itemNumber5);
 
 Array.prototype.customFindMethod = function(customFunction) {
     let targetItem = undefined
@@ -21,4 +18,3 @@ Array.prototype.customFindMethod = function(customFunction) {
 const itemNumber4 = someArray.customFindMethod(function(item) { // ***** this is a callback function we pass to our proto do return calculated item in loop inside proto.
     if(item === 4) return item // ***** implement out condition to find out item
 })
-console.log('itemNumber4', itemNumber4);
